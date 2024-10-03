@@ -1,0 +1,565 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+
+
+/* Navbar styles */
+.navbar {
+    background: linear-gradient(90deg, lightgreen, rgb(66, 63, 220), purple);
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    justify-content: space-between; /* Space between logo and hamburger */
+}
+
+.logo img {
+    width: 100px; /* Adjust the size of the logo */
+}
+
+.nav-items ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-items ul li {
+    display: inline-block;
+}
+
+.nav-items ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-items ul li a:hover {
+    color: #ffcc00; /* Hover color change */
+}
+
+/* Section styles */
+section {
+    padding: 60px 20px;
+    margin: 20px auto;
+    width: 80%;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+}
+
+
+/* Hide hamburger icon by default */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .nav-items {
+        display: none; /* Hide the nav items initially */
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: linear-gradient(90deg, lightgreen, rgb(66, 63, 220), purple);
+        text-align: center;
+    }
+
+    .nav-items ul {
+        flex-direction: column;
+    }
+
+    .nav-items ul li {
+        margin: 10px 0;
+    }
+
+    /* Show the hamburger icon on small devices */
+    .hamburger {
+        display: block;
+    }
+}
+
+
+
+/* Loader Styles */
+#loader {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Keyframes for spin animation */
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Hide loader by default */
+  body.loaded #loader {
+    display: none;
+  }
+  
+
+
+.imag {
+    background-image: url(10.png); /* Updated image path */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+}
+
+/* Main content styles */
+.content {
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+    position: absolute;
+    bottom: 65%;
+}
+
+.inside_content {
+    color: #397ee5;
+    padding: 20px;
+}
+
+.inside_content h2 {
+    font-size: 40px;
+    margin-top: 10px;
+    color: #004d40; 
+}
+
+.inside_content p {
+    font-size: 18px;
+    margin-top: 10px;
+    max-width: 600px;
+    line-height: 1.5;
+    color: gray;
+}
+
+/* Rocket text styling */
+.rocket {
+    position: absolute;
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    border-radius: 10px;
+    top: 40%; /* Adjust the vertical alignment */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Ensure complete centering */
+    z-index: 2;
+}
+
+
+
+/* Second Section Styling */
+/* Second Section Styling */
+.colour{
+    background-color: linear-gradient(to bottom, #ffffff, #0f8a9a);
+}
+.second_section {
+  
+    background-image: url(tree2.jpg);
+    background-size: cover;
+    margin: 0px auto;
+    width: 90vw;
+    max-width: 1000px;
+    border-radius: 30px;
+    text-align: center;
+    height: 280px;
+    color: #ffffff;
+    position: relative;
+    z-index: 0;
+}
+
+.inside_section {
+    padding-top: 8%;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+}
+
+.second_section .img h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: blue;
+}
+
+.second_section .img p {
+    font-size: 18px;
+    color: #dfe6e9;
+}
+
+/* Make the layout responsive */
+ @media (max-width: 768px) {
+    .inside_content h2 {
+        font-size: 30px;
+    }
+
+    .inside_content p {
+        font-size: 16px;
+        max-width: 90%;
+    }
+
+    .rocket {
+        font-size: 16px;
+        padding: 8px 15px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .second_section {
+        width: 90%;
+        height: auto;
+        padding-bottom: 5%;
+        margin-left: 5%;
+    }
+
+    .second_section .img h2 {
+        font-size: 24px;
+    }
+
+    .second_section .img p {
+        font-size: 16px;
+    }
+} 
+
+/* Container to hold the boxes */
+/* third image  */
+.box-container {
+    display: flex; /* Flexbox to align items in a row */
+    padding: 20px;
+}
+
+/* Individual box styles */
+.box1, .box2, .box3 {
+    z-index: 1;
+    color: black;
+    height: 300px;
+    border-radius: 20px;
+    padding: 0;
+    width: 25%; /* Each box takes up 32% width of the container */
+    margin-top: -3%;
+    margin-left: 6.5%; 
+    display: inline-block;
+}
+
+/* Ensure images inside the boxes are styled */
+.box1 div img, .box2 div img, .box3 div img {
+    transition: all 0.1s ease-in;
+    border-radius: 30px;
+    max-width: 28%;
+    height: 20%;
+    display: block;
+    align-self: flex-start;
+    margin-left: 35%;
+    z-index: 1;
+}
+
+.box1 h4, .box2 h4, .box3 h4 {
+    align-self: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.box1 p, .box2 p, .box3 p {
+    align-items: center;
+    justify-items: center;
+    
+    margin-top: 10px;
+}
+
+/* Set image alignment to the top */
+.box1 div, .box2 div, .box3 div {
+    display: flex; 
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center align children */
+    justify-content: flex-start; /* Align children at the start */
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+    .box-container {
+        flex-direction: column; /* Stack boxes vertically on smaller screens */
+        align-items: center;
+    }
+
+    .box1, .box2, .box3 {
+        width: 90%; /* Make boxes full width on smaller screens */
+        margin-left: 5%;
+        margin-bottom: 20px;
+    }
+}
+
+.box1 div img:hover, .box2 div img:hover, .box3 div img:hover {
+    transform: scale(1.1);
+}
+
+
+
+/* last part */
+.third_section {
+    display: flex;
+}
+
+.third_section .image {
+    background-image: url('growth1.png');
+
+
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    /* display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+     */
+      width: 100vw;
+    /* margin-left: 8%; */
+    box-shadow: 10px 10px 10px rgba(6, 105, 211, 0.816);
+    height: 100vh;
+    /* background-size: contain; */
+    padding: 8vh;
+    color: #fff; 
+}
+
+.third_section .image h1 {
+    padding-top: 2.5vh;
+}
+
+.third_section .image p {
+    padding-top: 2.5vh;
+    line-height: 4vh;
+}
+
+.containner {
+    display: flex;
+    max-width: 85%;
+}
+
+.containner .one {
+    align-self: flex-end;
+    margin-top: 20%;
+}
+
+.containner .two {
+    align-self: center;
+    padding-left: 2%;
+    margin-top: 4%;
+}
+
+.containner div img, .containner div img, .containner div img {
+    max-width: 25%;
+    max-height: 20%;
+}
+
+.containner p {
+    font-size: 14px;
+}
+
+/* Add responsiveness for mobile devices */
+@media (max-width: 768px) {
+    .third_section {
+        display: block;
+        text-align: center;
+    }
+
+    .third_section .image {
+        width: 95%;
+        margin-left: 2.5%;
+        height: auto;
+        padding: 2vh;
+        background-size: cover;
+    }
+
+    .containner {
+        display: block;
+        max-width: 100%;
+        padding: 2%;
+    }
+
+    .containner .one, .containner .two {
+        align-self: center;
+        margin-top: 5%;
+        text-align: center;
+    }
+
+    .containner div img {
+        max-width: 50%;
+        max-height: auto;
+    }
+
+    .containner p {
+        font-size: 12px;
+        padding-top: 1vh;
+    }
+
+    .third_section .image h1 {
+        font-size: 1.5rem;
+    }
+
+    .third_section .image p {
+        font-size: 1rem;
+        line-height: 1.9vh;
+    }
+}
+
+/* For even smaller devices (mobile phones) */
+@media (max-width: 480px) {
+    .third_section .image {
+        padding: 2vh;
+    }
+
+    .containner {
+        padding: 2%;
+    }
+
+    .containner div img {
+        max-width: 20%;
+    }
+    
+    .third_section .image h1 {
+        font-size: 1.2rem;
+    }
+
+    .third_section .image p {
+        padding-bottom: 15%;
+        font-size: 0.9rem;
+    }
+}
+
+
+
+
+
+/* Footer Styling */
+footer {
+    background: linear-gradient(135deg, #0d1f2d, #7ab4f3);
+    color: #fff;
+    padding: 50px 20px;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .footer-logo img {
+    max-width: 200px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .footer-logo img:hover {
+    transform: scale(1.1);
+  }
+  
+  .footer-links {
+    text-align: center;
+  }
+  
+  .footer-links h3 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #f5f5f5;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links ul li {
+    margin: 15px 0;
+  }
+  
+  .footer-links ul li a {
+    color: #ddd;
+    font-size: 18px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+  }
+  
+  .footer-links ul li a i {
+    margin-right: 10px;
+    color: #1db954;
+    transition: transform 0.3s;
+  }
+  
+  .footer-links ul li a:hover {
+    color: #1db954;
+    font-weight: bold;
+  }
+  
+  .footer-links ul li a:hover i {
+    transform: scale(1.3);
+  }
+  
+  /* Footer Bottom Section */
+  .footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    color: rgba(47, 31, 165, 0.7);
+    font-size: 16px;
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+    color: rgba(36, 14, 197, 0.7);
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .footer-logo {
+      margin-bottom: 20px;
+    }
+  }
+  
